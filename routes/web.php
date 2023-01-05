@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\ReadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'dosen'], function(){
-    Route::get('/profil', [DosenController::class, 'index']);
+    Route::get('/profil1', [DosenController::class, 'index']);
     Route::get('/data_pengampu', [DosenController::class, 'index2']);
+    Route::get('/profil', [ReadController::class, 'index']);
 });
